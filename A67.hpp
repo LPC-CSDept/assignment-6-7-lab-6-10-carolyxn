@@ -70,9 +70,11 @@ void swap(int &num1, int &num2, int &num3)
             remainder = b;
         }
         else if ((c > b) && (b < a))
+        {
             max = c; 
             min = b;
             remainder = a;
+        }
     }
 
 } 
