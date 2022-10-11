@@ -26,13 +26,13 @@ void swap(int &num1, int &num2, int &num3)
     c = num3; 
     if (a > b)
     {
-        if (a > c) && (b > c);=
+        if ((a > c) && (b > c));=
         {
             max = a;
             min = c; 
             remainder = b; 
         }
-        else if (a > c) && (b < c)
+        else if ((a > c) && (b < c))
         {
             max = a; 
             min = b; 
@@ -48,11 +48,11 @@ void swap(int &num1, int &num2, int &num3)
     }
     else if (b > c)
     {
-        if (a < b) && (c > a)
+        if ((a < b) && (c > a))
             max = b; 
             min = c; 
             remainder = a; 
-        else if (c < a) && (b > a)
+        else if ((c < a) && (b > a))
         {
             max = b;
             min = a;
@@ -61,16 +61,29 @@ void swap(int &num1, int &num2, int &num3)
     }
     else if (c > a)
     {
-        if (c > b) && (a < b)
+        if ((c > b) && (a < b))
         {
             max = c; 
             min = a;
             remainder = b;
         }
-        else if (c > b) && (b < a)
+        else if ((c > b) && (b < a))
             max = c; 
             min = b;
             remainder = a;
     }
 
 } 
+
+void swap(int &num1, int &num2, int &num3, int &num4)
+{
+    int a = num1; 
+    int b = num2; 
+    int c = num3; 
+    int d = num4; 
+
+    num4 = c; 
+    num3 = b; 
+    num2 = a; 
+    num1 = d;
+}
