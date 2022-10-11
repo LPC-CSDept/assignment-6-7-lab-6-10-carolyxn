@@ -49,9 +49,11 @@ void swap(int &num1, int &num2, int &num3)
     else if (b > c)
     {
         if ((a < b) && (c > a))
+        {
             max = b; 
             min = c; 
             remainder = a; 
+        }
         else if ((c < a) && (b > a))
         {
             max = b;
