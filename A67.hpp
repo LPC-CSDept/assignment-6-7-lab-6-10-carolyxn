@@ -41,17 +41,17 @@ void swap(int &num1, int &num2, int &num3)
             remainder = nums[i];
             break;
         }
-        if (num1 == num3)
+        else if (num1 == num3)
         {
             remainder = num1;
             break;
         }
-        if (num2 == num3)
+        else if (num2 == num3)
         {
             remainder = num2; 
             break;
         }
-        if (num1 == num3)
+        else if (num1 == num3)
         {
             remainder = num1; 
             break;
