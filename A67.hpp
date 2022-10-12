@@ -20,63 +20,25 @@ void swap(int &num1, int &num2)
 void swap(int &num1, int &num2, int &num3)
 {
     int a, b, c; 
-    int max, min, remainder;
-    a = num1; 
-    b = num2; 
-    c = num3; 
-    if (a > b)
+    int max, min, remainder, nums[3];
+    nums[0] = num1, nums[1] = num2, nums[2] = num3;
+
+    for (int i = 1; i < 3; i++)
     {
-        if ((a > c) && (b > c))
-        {
-            max = a;
-            min = c; 
-            remainder = b; 
-        }
-        
-        if ((a > c) && (b < c))
-        {
-            max = a; 
-            min = b; 
-            remainder = c; 
-        }
-        else if (a < c)
-        {
-            max = b; 
-            min = a; 
-            remainder = c;
-        }
-    }
-    else if (b > c)
-    {
-        if ((a < b) && (c > a))
-        {
-            max = b; 
-            min = c; 
-            remainder = a; 
-        }
-        else if ((c < a) && (b > a))
-        {
-            max = b;
-            min = a;
-            remainder = c; 
-        }
-    }
-    else if (c > a)
-    {
-        if ((c > b) && (a < b))
-        {
-            max = c; 
-            min = a;
-            remainder = b;
-        }
-        else if ((c > b) && (b < a))
-        {
-            max = c; 
-            min = b;
-            remainder = a;
-        }
+        if (nums[i] > max)
+            max = nums[i];
+        if (nums[i] < min)
+            min = nums[i];
     }
 
+    for (int i =0; i < 3; i++)
+    {
+        if (min != nums[i] && max != nums[i])
+        {
+            remainder = nums[i];
+            break;
+        }
+    }
 } 
 
 void swap(int &num1, int &num2, int &num3, int &num4)
