@@ -30,11 +30,26 @@ void swap(int &num1, int &num2, int &num3)
             min = nums[i];
     }
 
-    for (int i =0; i < 3; i++)
+    for (int i = 0; i < 3; i++)
     {
         if (min != nums[i] && max != nums[i])
         {
             remainder = nums[i];
+            break;
+        }
+        if (num1 == num3)
+        {
+            remainder = num1;
+            break;
+        }
+        if (num2 == num3)
+        {
+            remainder = num2; 
+            break;
+        }
+        if (num1 == num3)
+        {
+            remainder = num1; 
             break;
         }
     }
