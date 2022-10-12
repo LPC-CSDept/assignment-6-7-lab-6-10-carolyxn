@@ -34,8 +34,6 @@ void swap(int &num1, int &num2, int &num3)
             remainder = max; 
     }
 
-    for (int i = 0; i < 3; i++)
-    {
         if (min != nums[i] && max != nums[i])
         {
             remainder = nums[i];
@@ -56,7 +54,7 @@ void swap(int &num1, int &num2, int &num3)
             remainder = num1; 
             break;
         }
-    }
+
     num1 = min;
     num2 = remainder; 
     num3 = max; 
