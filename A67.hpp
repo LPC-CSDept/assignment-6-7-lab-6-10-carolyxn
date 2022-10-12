@@ -19,7 +19,6 @@ void swap(int &num1, int &num2)
 
 void swap(int &num1, int &num2, int &num3)
 {
-    int a, b, c; 
     int max, min, remainder, nums[3];
     nums[0] = num1, nums[1] = num2, nums[2] = num3;
 
@@ -51,8 +50,8 @@ void swap(int &num1, int &num2, int &num3, int &num4)
     int c = num3; 
     int d = num4; 
 
-    num4 = c; 
-    num3 = b; 
-    num2 = a; 
-    num1 = d;
+    num4 = a; 
+    num3 = d; 
+    num2 = c; 
+    num1 = b;
 }
