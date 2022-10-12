@@ -34,26 +34,22 @@ void swap(int &num1, int &num2, int &num3)
             remainder = max; 
     }
 
-        if (min != nums[i] && max != nums[i])
-        {
-            remainder = nums[i];
-            break;
-        }
-        else if (num1 == num3)
-        {
-            remainder = num1;
-            break;
-        }
-        else if (num2 == num3)
-        {
-            remainder = num2; 
-            break;
-        }
-        else if (num1 == num3)
-        {
-            remainder = num1; 
-            break;
-        }
+    if (min != nums[i] && max != nums[i])
+    {
+        remainder = nums[i];
+    }
+    else if (num1 == num3)
+    {
+        remainder = num1;
+    }
+    else if (num2 == num3)
+    {
+        remainder = num2;
+    }
+    else if (num1 == num3)
+    {
+        remainder = num1; 
+    }
 
     num1 = min;
     num2 = remainder; 
