@@ -39,6 +39,9 @@ void swap(int &num1, int &num2, int &num3)
             break;
         }
     }
+    num1 = min;
+    num2 = remainder; 
+    num3 = max; 
 } 
 
 void swap(int &num1, int &num2, int &num3, int &num4)
