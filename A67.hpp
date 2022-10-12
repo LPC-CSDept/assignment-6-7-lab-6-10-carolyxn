@@ -19,7 +19,7 @@ void swap(int &num1, int &num2)
 void swap(int &num1, int &num2, int &num3) // 20 30 10
 {
     int max, min, remainder, nums[3];
-    int check[3];
+    int check[3] = {0};
     nums[0] = num1, nums[1] = num2, nums[2] = num3;
 
     min = max = nums[0]; // 20
@@ -45,24 +45,31 @@ void swap(int &num1, int &num2, int &num3) // 20 30 10
             max = nums[i];
         }
 
-        // min must be initialized before 35.
-        if (min != nums[i] && max != nums[i])
-        {
-            remainder = nums[i];
-        }
-        else if (num1 == num3)
-        {
-            remainder = num1;
-        }
-        else if (num2 == num3)
-        {
-            remainder = num2;
-        }
-        else if (num1 == num3)
-        {
-            remainder = num1;
-        }
+        // // min must be initialized before 35.
+        // if (min != nums[i] && max != nums[i])
+        // {
+        //     remainder = nums[i];
+        // }
+        // else if (num1 == num3)
+        // {
+        //     remainder = num1;
+        // }
+        // else if (num2 == num3)
+        // {
+        //     remainder = num2;
+        // }
+        // else if (num1 == num3)
+        // {
+        //     remainder = num1;
+        // }
     }
+    for (int i = 0; i < 3; i++)
+        if (nums[i] == min || nums[i] == max)
+            check[i] = 1;
+    for (int i = 0; i < 3; i++)
+        if (check[i] == 0)
+            remainder = nums[i];
+
     num1 = min;
     num2 = remainder;
     num3 = max;
