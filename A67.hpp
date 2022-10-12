@@ -33,7 +33,7 @@ void swap(int &num1, int &num2, int &num3)
             min = max;
             remainder = max; 
 
-        else if (min != nums[i] && max != nums[i])
+        if (min != nums[i] && max != nums[i])
         {
             remainder = nums[i];
         }
