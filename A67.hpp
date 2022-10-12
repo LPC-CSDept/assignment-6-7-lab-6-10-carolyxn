@@ -28,6 +28,10 @@ void swap(int &num1, int &num2, int &num3)
             max = nums[i];
         if (nums[i] < min)
             min = nums[i];
+        else if (nums[i] == min) || (nums[i] == max)
+            max = nums[i];
+            min = max;
+            remainder = max; 
     }
 
     for (int i = 0; i < 3; i++)
